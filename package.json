@@ -9,6 +9,18 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "jest --passWithNoTests",
+      "eslint --ext .tsx --ext .ts src/ --fix",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.10",

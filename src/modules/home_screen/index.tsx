@@ -8,6 +8,7 @@ const HomeScreen: React.FC = () => {
       <SafeAreaView>
         <View
           style={{
+            flexDirection: 'column',
             justifyContent: 'center',
           }}>
           <View>
@@ -19,6 +20,18 @@ const HomeScreen: React.FC = () => {
                 textTransform: 'capitalize',
               }}>
               Mero Swastha
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={{
+                textAlign: 'center',
+                fontSize: 30,
+                fontWeight: 'bold',
+                textTransform: 'capitalize',
+                marginTop: 30,
+              }}>
+              The Medical Report App
             </Text>
           </View>
         </View>
